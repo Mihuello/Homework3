@@ -5,8 +5,10 @@ package PrimeNumber;
 public class PrimeNumber {
 
     static void primeNumber(int number) {
-        if (number == 1) System.out.println(number + " - Это число не составное и не простое ");
-
+        if (number == 1 ) System.out.println(number + " - Это число не составное и не простое ");
+        if (number == 0) {
+            System.out.println(number + "-Это число не является простым");
+        }
         for (int i = 2; i <= number; i++) {
             if (number % i == 0 && i < number) {
 
@@ -20,7 +22,8 @@ public class PrimeNumber {
     }
 
     public static void main(String[] args) {
-        primeNumber(11);
+
+        primeNumber(3);
     }
 }
 
