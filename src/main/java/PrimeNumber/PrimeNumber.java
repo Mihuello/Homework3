@@ -1,21 +1,49 @@
 package PrimeNumber;
-
+/*
+Простые числа
+ */
 public class PrimeNumber {
-    public static void main(String[] args) {
-        boolean isPrime;
-        for (int number = 2; number < 50; number++) {
-            isPrime = true;
-            // Проверям делится ли чисто без остатка
-            for (int number2 = 2; number2 <= number / number2; number2++) {
-                // Если число делится без остатка, значит оно не простое
-                if ((number % number2) == 0) isPrime = false;
-                if (isPrime)
 
-                    System.out.println(number + " Простое число");
+    static void primeNumber(int number) {
+        if (number == 1) System.out.println(number + " - Это число не составное и не простое ");
+
+        for (int i = 2; i <= number; i++) {
+            if (number % i == 0 && i < number) {
+
+                System.out.println(number + " - Это не простое число");
+                break;
+            } else if (number % i == 0) {
+
+                System.out.println(number + " - Это простое число");
             }
-
         }
+    }
 
+    public static void main(String[] args) {
+        primeNumber(11);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
