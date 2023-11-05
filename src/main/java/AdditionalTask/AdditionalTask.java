@@ -11,19 +11,16 @@ public class AdditionalTask {
         int theFullCostOfStoringBuckwheat = 0;
         int totalNumberOfBuckwheatEaten = 0;
 
-        for (int i = forHowLongDoesHeWantToEatBuckwheat; i > 0; i--) {
-            totalNumberOfBuckwheatEaten = totalNumberOfBuckwheatEaten + vasilyEatsKilogramsOfBuckwheatInAMonth;
-        }
+        totalNumberOfBuckwheatEaten = forHowLongDoesHeWantToEatBuckwheat * vasilyEatsKilogramsOfBuckwheatInAMonth;
 
         System.out.println("Месяцев всего понадобиться для употребления всей гречки Василием: " + totalNumberOfBuckwheatEaten);
 
         for (int i = forHowLongDoesHeWantToEatBuckwheat; i > 0; i--) {
             theFullCostOfStoringBuckwheat = theFullCostOfStoringBuckwheat + (storingOneKilogramPerMonthCosts * totalNumberOfBuckwheatEaten);
-            totalNumberOfBuckwheatEaten = totalNumberOfBuckwheatEaten-6;
+            totalNumberOfBuckwheatEaten = totalNumberOfBuckwheatEaten - 6;
         }
 
-        System.out.println("Общая стоимость хранения гречки за все время: " + theFullCostOfStoringBuckwheat);
+        System.out.println("Общая цена за хранение гречки: " + theFullCostOfStoringBuckwheat);
     }
 }
-
 
